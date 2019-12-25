@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="1277.0" prefWidth="974.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ScrollPane>
+         <content>
+            <AnchorPane prefHeight="1296.0" prefWidth="974.0">
+               <children>
+                  <Text layoutX="120.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Vertex" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <Separator layoutX="346.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="808.0" prefWidth="0.0" />
+                  <Separator layoutX="580.0" orientation="VERTICAL" prefHeight="808.0" prefWidth="16.0" />
+                  <Separator layoutX="-2.0" layoutY="390.0" prefHeight="8.0" prefWidth="353.0" />
+                  <TextField fx:id="vertex" layoutX="14.0" layoutY="85.0" prefHeight="28.0" prefWidth="100.0" />
+                  <Button fx:id="add" layoutX="130.0" layoutY="166.0" mnemonicParsing="false" onAction="#add_input" text="Add" />
+                  <TextField layoutX="140.0" layoutY="86.0" prefHeight="16.0" prefWidth="53.0" fx:id="x" />
+                  <TextField fx:id="y" layoutX="228.0" layoutY="86.0" prefHeight="16.0" prefWidth="53.0" />
+                  <Text layoutX="50.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Text layoutX="152.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  x" />
+                  <Text layoutX="240.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  y" />
+                  <Text layoutX="110.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Vertex" />
+                  <TextField fx:id="newvertex" layoutX="76.0" layoutY="281.0" />
+                  <Text layoutX="137.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Button layoutX="125.0" layoutY="351.0" mnemonicParsing="false" onAction="#search_input" text="Search" />
+                  <Text layoutX="122.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Vertex" />
+                  <TextField fx:id="modvertex" layoutX="18.0" layoutY="671.0" prefHeight="26.0" prefWidth="92.0" />
+                  <TextField fx:id="newx" layoutX="133.0" layoutY="671.0" prefHeight="26.0" prefWidth="53.0" />
+                  <TextField fx:id="newy" layoutX="229.0" layoutY="671.0" prefHeight="26.0" prefWidth="53.0" />
+                  <Text layoutX="45.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Text layoutX="148.0" layoutY="719.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  x" />
+                  <Text layoutX="247.0" layoutY="719.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  y" />
+                  <TextArea fx:id="space" layoutX="367.0" layoutY="198.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Text layoutX="117.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Vertex" />
+                  <TextField fx:id="delvertex" layoutX="82.0" layoutY="475.0" />
+                  <Text layoutX="144.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Button layoutX="133.0" layoutY="541.0" mnemonicParsing="false" onAction="#delete_input" text="Delete" />
+                  <Button layoutX="129.0" layoutY="740.0" mnemonicParsing="false" onAction="#modify_input" text="Modify" />
+                  <Text layoutX="746.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Edge" />
+                  <TextField fx:id="fromvertex" layoutX="613.0" layoutY="87.0" prefHeight="26.0" prefWidth="92.0" />
+                  <TextField fx:id="tovertex" layoutX="732.0" layoutY="85.0" prefHeight="26.0" prefWidth="90.0" />
+                  <TextField fx:id="weight" layoutX="859.0" layoutY="85.0" prefHeight="26.0" prefWidth="63.0" />
+                  <Button fx:id="addedge" layoutX="746.0" layoutY="153.0" mnemonicParsing="false" onAction="#add_edge" text="Add Edge" />
+                  <Text layoutX="619.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Vertex" />
+                  <Text layoutX="749.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Vertex" />
+                  <Text layoutX="867.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" />
+                  <Text layoutX="736.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Edge" />
+                  <Button layoutX="736.0" layoutY="345.0" mnemonicParsing="false" onAction="#search_edge" text="Search Edge" />
+                  <Text layoutX="746.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Edge" />
+                  <Text layoutX="749.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Edge" />
+                  <Button layoutX="737.0" layoutY="541.0" mnemonicParsing="false" onAction="#delete_edge" text="Delete Edge" />
+                  <Button layoutX="740.0" layoutY="734.0" mnemonicParsing="false" onAction="#modify_edge" text="Modify Edge" />
+                  <TextField fx:id="sfromvertex" layoutX="613.0" layoutY="272.0" prefHeight="26.0" prefWidth="118.0" />
+                  <TextField fx:id="stovertex" layoutX="822.0" layoutY="272.0" prefHeight="26.0" prefWidth="109.0" />
+                  <Text layoutX="632.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Vertex" />
+                  <Text layoutX="849.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Vertex" />
+                  <TextField fx:id="dfromvertex" layoutX="620.0" layoutY="472.0" prefHeight="26.0" prefWidth="109.0" />
+                  <TextField fx:id="dtovertex" layoutX="822.0" layoutY="472.0" prefHeight="26.0" prefWidth="109.0" />
+                  <Text layoutX="641.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Vertex" />
+                  <Text layoutX="849.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Vertex" />
+                  <TextField fx:id="mfromvertex" layoutX="596.0" layoutY="671.0" prefHeight="26.0" prefWidth="109.0" />
+                  <TextField fx:id="mtovertex" layoutX="737.0" layoutY="671.0" prefHeight="26.0" prefWidth="100.0" />
+                  <TextField fx:id="mweight" layoutX="875.0" layoutY="671.0" prefHeight="26.0" prefWidth="63.0" />
+                  <Text layoutX="610.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Vertex" />
+                  <Text layoutX="757.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Vertex" />
+                  <Text layoutX="889.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" />
+                  <Text layoutX="411.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import From File" />
+                  <TextField fx:id="filepath" layoutX="381.0" layoutY="87.0" />
+                  <Text layoutX="442.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Path" />
+                  <Button layoutX="436.0" layoutY="153.0" mnemonicParsing="false" onAction="#add_file" text="Import" />
+                  <Text layoutX="425.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Export To File" />
+                  <TextField fx:id="ofilepath" layoutX="382.0" layoutY="472.0" />
+                  <Text layoutX="440.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Path" />
+                  <Button layoutX="439.0" layoutY="541.0" mnemonicParsing="false" onAction="#export_data" text="Export" />
+                  <Text layoutX="442.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dijkstra" />
+                  <TextField fx:id="source" layoutX="365.0" layoutY="671.0" prefHeight="26.0" prefWidth="92.0" />
+                  <TextField fx:id="goal" layoutX="474.0" layoutY="671.0" prefHeight="26.0" prefWidth="90.0" />
+                  <Text layoutX="389.0" layoutY="719.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Source" />
+                  <Text layoutX="500.0" layoutY="720.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal" />
+                  <Button layoutX="426.0" layoutY="740.0" mnemonicParsing="false" onAction="#dijkstra" text="Find Path" />
+                  <AnchorPane fx:id="animation" layoutX="3.0" layoutY="766.0" prefHeight="508.0" prefWidth="974.0" />
+                  <Text layoutX="375.0" layoutY="609.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animation" />
+                  <TextField fx:id="type" layoutX="457.0" layoutY="591.0" prefHeight="26.0" prefWidth="105.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
